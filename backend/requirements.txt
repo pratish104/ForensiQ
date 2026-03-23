@@ -1,0 +1,39 @@
+# ─── Web Framework & Server ───────────────────────────────────────────────────
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.12
+
+# ─── Security & Auth ──────────────────────────────────────────────────────────
+python-jose[cryptography]>=3.3.0
+# passlib has a known bug with bcrypt>=4.x — pin bcrypt to 4.0.1 to avoid it
+passlib[bcrypt]>=1.7.4
+bcrypt==4.0.1
+
+# ─── Database ─────────────────────────────────────────────────────────────────
+sqlalchemy>=2.0.35
+alembic>=1.13.0
+psycopg[binary]>=3.1.0
+
+# ─── Email Validation (required by pydantic EmailStr) ─────────────────────────
+pydantic[email]>=2.7.0
+pydantic-settings>=2.5.0
+email-validator>=2.1.0
+
+# ─── Forensics & Data Processing ──────────────────────────────────────────────
+pillow>=10.4.0
+exifread>=3.0.0
+PyPDF2>=3.0.1
+# scapy on Windows needs Npcap — see install note below
+scapy>=2.6.0
+pandas>=2.2.3
+
+# ─── Utilities ────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.1
+httpx>=0.27.0
+aiofiles>=24.1.0
+beautifulsoup4>=4.12.3
+requests>=2.32.3
+
+# ─── Task Queue & Cache (optional — comment out if not using Redis yet) ────────
+# redis>=5.0.0
+# celery>=5.4.0
